@@ -11,6 +11,7 @@ public class Pet : MonoBehaviour
     private int hunger;
 
     private bool serverTime;
+    private int clickCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,24 @@ public class Pet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.GetMouseButtonUp (0))
+        {
+            Vector2 v = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(v), Vector2.zero);
+            if(hit) //on click on the pet, it will increase hapiness
+            {
+                Debug.Log(hit.transform.gameObject.name);
+                if(hit.transform.gameObject.tag == "Pet") 
+                {
+                    clickCount++;
+                    if(clickCount >= 3)
+                    {
+                        clickCount = 0;
+                        updateHappiness(1);
+                    }
+                }
+            }
+        }
     }
 
     void updateStatus()
@@ -51,7 +69,8 @@ public class Pet : MonoBehaviour
         if (!PlayerPrefs.HasKey("then"))
             PlayerPrefs.SetString("then", getStringTime());
 
-        TimeSpan ts = getTimeSpan();
+
+        TimeSpan ts = getTimeSpan(); //checks the time played and reduces hunger and hapiness
         hunger -= (int)(ts.TotalHours * 2);
         if(hunger <0)
         {
@@ -104,5 +123,14 @@ public class Pet : MonoBehaviour
     {
         get { return happiness; }
         set { happiness = value; }
+    }
+
+    public void updateHappiness(int i)
+    {
+        happiness += i;
+        if (happiness> 100)
+        {
+            happiness = 100;
+        }
     }
 }
