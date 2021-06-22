@@ -15,7 +15,7 @@ public class Pet : MonoBehaviour
     void Start()
     {
 
-       // PlayerPrefs.SetString("then", "21/06/2021 11:20:12");
+        PlayerPrefs.SetString("then", "22/06/2021 11:20:12");
         updateStatus();
     }
 
@@ -51,7 +51,18 @@ public class Pet : MonoBehaviour
         if (!PlayerPrefs.HasKey("then"))
             PlayerPrefs.SetString("then", getStringTime());
 
-       // Debug.Log(getTimeSpan().ToString());
+        TimeSpan ts = getTimeSpan();
+        hunger -= (int)(ts.TotalHours * 2);
+        if(hunger <0)
+        {
+            hunger = 0;
+        }
+        happiness -= (int)((100 - hunger) * (ts.TotalHours / 5));
+        if(happiness<0)
+        {
+            happiness = 0;
+        }
+        // Debug.Log(getTimeSpan().ToString());
       //  Debug.Log(getTimeSpan().TotalHours);
 
         if (serverTime)

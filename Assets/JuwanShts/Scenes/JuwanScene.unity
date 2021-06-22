@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128320688}
   - component: {fileID: 128320687}
+  - component: {fileID: 128320686}
   m_Layer: 0
   m_Name: Pet
   m_TagString: Untagged
@@ -140,6 +141,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &128320686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128320685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aad5069597821e46ae6d4de179dd0c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  happiness: 0
+  hunger: 0
 --- !u!212 &128320687
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -546,6 +561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1204272929}
+  - component: {fileID: 1204272928}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -553,6 +569,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1204272928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204272927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cddcb14c527aee342a619fd757a0bfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  happinessText: {fileID: 1907382518}
+  hungerText: {fileID: 1198220868}
+  pet: {fileID: 128320685}
 --- !u!4 &1204272929
 Transform:
   m_ObjectHideFlags: 0
