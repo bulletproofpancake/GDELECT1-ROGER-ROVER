@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;//for time
+using UnityEngine.EventSystems;
 
-public class Pet : MonoBehaviour
+public class Pet : MonoBehaviour, IDropHandler
 {
     [SerializeField]
     private int happiness;
@@ -12,6 +13,9 @@ public class Pet : MonoBehaviour
 
     private bool serverTime;
     private int clickCount;
+
+    Ray ray;
+    RaycastHit hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,26 +27,38 @@ public class Pet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonUp (0))
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
         {
-            Vector2 v = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(v), Vector2.zero);
-            if(hit) //on click on the pet, it will increase hapiness
+            if (Input.GetMouseButtonUp(0))
             {
-                Debug.Log(hit.transform.gameObject.name);
-                if(hit.transform.gameObject.tag == "Pet") 
+                print(hit.collider.name);
+                clickCount++;
+                if (clickCount >= 3)
                 {
-                    clickCount++;
-                    if(clickCount >= 3)
-                    {
-                        clickCount = 0;
-                        updateHappiness(1);
-                    }
+                    clickCount = 0;
+                    updateHappiness(1);
                 }
             }
+            
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.CompareTag("Food"))
+        {
+            Debug.Log("hit");
+            updateHunger(30);
+            Destroy(collision.gameObject);
         }
     }
 
+    public void OnDrop(PointerEventData eventData)
+    {
+        Debug.Log("OnDrop");
+        updateHunger(30);
+    }
     void updateStatus()
     {
         if (!PlayerPrefs.HasKey("hunger"))
@@ -131,6 +147,15 @@ public class Pet : MonoBehaviour
         if (happiness> 100)
         {
             happiness = 100;
+        }
+    }
+
+    public void updateHunger(int i)
+    {
+        hunger += i;
+            if(hunger > 100)
+        {
+            hunger = 100;
         }
     }
 }
