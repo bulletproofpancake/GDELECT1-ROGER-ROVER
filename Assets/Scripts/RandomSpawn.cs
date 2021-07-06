@@ -87,7 +87,7 @@ public class RandomSpawn : MonoBehaviour //https://gamedev.stackexchange.com/que
             }
 
             // Spawn the chosen item.
-            Instantiate(spawnList[chosenIndex].gameObject, pos, Quaternion.identity);
+            Instantiate(spawnList[chosenIndex].gameObject, pos, spawnList[chosenIndex].gameObject.transform.rotation);
 
 
             yield return new WaitForSeconds(SpawnIntervals);
