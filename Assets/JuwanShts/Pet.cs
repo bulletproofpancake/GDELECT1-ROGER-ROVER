@@ -183,6 +183,4 @@ public class Pet : MonoBehaviour
             stat = 0;
         return stat;
     }
-    
-
 }
