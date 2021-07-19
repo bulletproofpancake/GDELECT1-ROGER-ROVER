@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Pet : MonoBehaviour
@@ -157,8 +158,9 @@ public class Pet : MonoBehaviour
         // }
     #endregion
 
-    [SerializeField] private int happiness;
-    [SerializeField] private int hunger;
+    private int happiness;
+
+    private int hunger;
 
     public int Happiness => happiness;
     public int Hunger => hunger;
@@ -168,14 +170,26 @@ public class Pet : MonoBehaviour
     public void Start()
     {
         CalculateStats();
+        StartCoroutine(ReduceStats());
     }
 
     private void CalculateStats()
     {
-        var timePassed = gameManager.Instance.hoursPassed;
+
+        happiness = PlayerPrefs.GetInt("happiness");
+        hunger = PlayerPrefs.GetInt("hunger");
+
+        if (happiness >= 100)
+            happiness = 100;
+        
+        if (hunger >= 100)
+            hunger = 100;
+        
+        //multiplied to 5 because stats lose 5 points per hour
+        var timePassed = gameManager.Instance.hoursPassed * 5;
         happiness = CalculateStat(happiness, timePassed);
         hunger = CalculateStat(hunger, timePassed);
-        
+        Debug.LogError(timePassed);
     }
 
     private int CalculateStat(int stat, int timePassed)
@@ -214,4 +228,15 @@ public class Pet : MonoBehaviour
     {
         PetRover();
     }
+
+    IEnumerator ReduceStats()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(120f);
+            happiness = CalculateStat(happiness, 1);
+            hunger = CalculateStat(hunger, 1);
+        }
+    }
+    
 }

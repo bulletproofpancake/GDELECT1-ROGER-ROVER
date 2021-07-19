@@ -28,10 +28,12 @@ public class gameManager : Singleton<gameManager>
     {
         PlayerPrefs.SetString("entryTime", DateTime.Now.ToString());
     }
-
-    //TODO: CALL ON EXIT
-    public void SetExitTime()
+    
+    public void SetExitStats()
     {
+        PlayerPrefs.SetInt("happiness", pet.Happiness);
+        PlayerPrefs.SetInt("hunger", pet.Hunger);
+        PlayerPrefs.SetInt("cash", CashManager.instance.cash);
         PlayerPrefs.SetString("exitTime", DateTime.Now.ToString());
     }
 
@@ -45,7 +47,6 @@ public class gameManager : Singleton<gameManager>
 
         var timeSinceExit = entryDate.Subtract(exitDate);
 
-        //TODO: CHANGE TO HOURS
         hoursPassed = timeSinceExit.Hours;
         
         print(hoursPassed);
@@ -56,6 +57,13 @@ public class gameManager : Singleton<gameManager>
     {
         happinessText.text = $"Happiness: {pet.Happiness}";
         hungerText.text = $"Hunger: {pet.Hunger}";
+        
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            SetExitStats();
+            Application.Quit();
+        }
+        
     }
 
 
