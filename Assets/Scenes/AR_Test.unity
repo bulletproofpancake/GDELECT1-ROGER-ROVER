@@ -1657,6 +1657,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308549871}
   m_Mesh: {fileID: 729694698471800340, guid: 5181c8bbe8f69d94caee3b3ca4f80699, type: 3}
+--- !u!114 &322683890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1480642834870285615, guid: 0e603499337e7544cbdef456c823d111, type: 3}
+  m_PrefabInstance: {fileID: 965807390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371697879
 GameObject:
   m_ObjectHideFlags: 0
@@ -7014,7 +7025,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   happinessText: {fileID: 638872609}
   hungerText: {fileID: 611355545}
+  hoursText: {fileID: 322683890}
   pet: {fileID: 1613850990}
+  hoursPassed: 0
 --- !u!4 &2047691390
 Transform:
   m_ObjectHideFlags: 0

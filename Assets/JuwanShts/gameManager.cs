@@ -3,23 +3,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-using System;
 
 public class gameManager : MonoBehaviour
 {
 
     public Text happinessText;
     public Text hungerText;
-
+    public Text hoursText;
     public Pet pet;
 
+    public int hoursPassed;
 
     private void Awake()
     {
         SetEntryTime();
     }
 
-    private static void SetEntryTime()
+    private void Start()
+    {
+        CalculateTimePassed();
+    }
+
+    private void SetEntryTime()
     {
         PlayerPrefs.SetString("entryTime", DateTime.Now.ToString());
         Debug.LogWarning(PlayerPrefs.GetString("entryTime"));
@@ -32,13 +37,26 @@ public class gameManager : MonoBehaviour
         Debug.LogWarning(PlayerPrefs.GetString("exitTime"));
     }
 
+    private void CalculateTimePassed()
+    {
+        var entryTime = PlayerPrefs.GetString("entryTime");
+        var exitTime = PlayerPrefs.GetString("exitTime");
+        
+        var entryDate = DateTime.Parse(entryTime);
+        var exitDate = DateTime.Parse(exitTime);
+
+        var timeSinceExit = entryDate.Subtract(exitDate);
+
+        //TODO: CHANGE TO HOURS
+        hoursPassed = timeSinceExit.Minutes;
+
+    }
+
     private void Update()
     {
-        happinessText.text = pet.checkHapiness.ToString();
-        hungerText.text = pet.checkHunger.ToString();
-        
-        if(Input.GetKeyDown(KeyCode.Space)) SetExitTime();
-
+        happinessText.text = $"Happiness: {pet.checkHapiness}";
+        hungerText.text = $"Hunger: {pet.checkHunger}";
+        hoursText.text = $"Hours since last play: {hoursPassed}";
     }
 
 
