@@ -8,7 +8,6 @@ public class gameManager : Singleton<gameManager>
 
     public Text happinessText;
     public Text hungerText;
-    public Text hoursText;
     public Pet pet;
 
     public int hoursPassed;
@@ -48,6 +47,8 @@ public class gameManager : Singleton<gameManager>
 
         //TODO: CHANGE TO HOURS
         hoursPassed = timeSinceExit.Hours;
+        
+        print(hoursPassed);
 
     }
 
@@ -55,7 +56,6 @@ public class gameManager : Singleton<gameManager>
     {
         happinessText.text = $"Happiness: {pet.Happiness}";
         hungerText.text = $"Hunger: {pet.Hunger}";
-        hoursText.text = $"Hours since last play: {hoursPassed}";
     }
 
 
