@@ -21,18 +21,6 @@ public class CashManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    void Start()
-    {
         cash = PlayerPrefs.GetInt("cash");
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-     
-    }
-
-
 }

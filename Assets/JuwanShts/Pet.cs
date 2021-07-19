@@ -158,12 +158,12 @@ public class Pet : MonoBehaviour
         // }
     #endregion
 
-    private int happiness;
+    private int _happiness;
 
-    private int hunger;
+    private int _hunger;
 
-    public int Happiness => happiness;
-    public int Hunger => hunger;
+    public int Happiness => _happiness;
+    public int Hunger => _hunger;
 
     private int _petCounter;
 
@@ -176,20 +176,19 @@ public class Pet : MonoBehaviour
     private void CalculateStats()
     {
 
-        happiness = PlayerPrefs.GetInt("happiness");
-        hunger = PlayerPrefs.GetInt("hunger");
+        _happiness = PlayerPrefs.GetInt("happiness");
+        _hunger = PlayerPrefs.GetInt("hunger");
 
-        if (happiness >= 100)
-            happiness = 100;
+        if (_happiness >= 100)
+            _happiness = 100;
         
-        if (hunger >= 100)
-            hunger = 100;
+        if (_hunger >= 100)
+            _hunger = 100;
         
         //multiplied to 5 because stats lose 5 points per hour
         var timePassed = gameManager.Instance.hoursPassed * 5;
-        happiness = CalculateStat(happiness, timePassed);
-        hunger = CalculateStat(hunger, timePassed);
-        Debug.LogError(timePassed);
+        _happiness = CalculateStat(_happiness, timePassed);
+        _hunger = CalculateStat(_hunger, timePassed);
     }
 
     private int CalculateStat(int stat, int timePassed)
@@ -203,17 +202,19 @@ public class Pet : MonoBehaviour
     private int AddToStat(int stat, int points)
     {
         stat += points;
+        if (stat >= 100)
+            stat = 100;
         return stat;
     }
 
     public void AddToHappiness(int points)
     {
-        happiness = AddToStat(happiness, points);
+        _happiness = AddToStat(_happiness, points);
     }
 
     public void AddToHunger(int points)
     {
-        hunger = AddToStat(hunger, points);
+        _hunger = AddToStat(_hunger, points);
     }
 
     private void PetRover()
@@ -221,7 +222,7 @@ public class Pet : MonoBehaviour
         _petCounter++;
         // Happiness increases every 3 clicks
         if(_petCounter % 3 == 0)
-            happiness = AddToStat(happiness, 1);
+            _happiness = AddToStat(_happiness, 1);
     }
 
     private void OnMouseDown()
@@ -229,13 +230,13 @@ public class Pet : MonoBehaviour
         PetRover();
     }
 
-    IEnumerator ReduceStats()
+    private IEnumerator ReduceStats()
     {
         while (true)
         {
             yield return new WaitForSeconds(120f);
-            happiness = CalculateStat(happiness, 1);
-            hunger = CalculateStat(hunger, 1);
+            _happiness = CalculateStat(_happiness, 1);
+            _hunger = CalculateStat(_hunger, 1);
         }
     }
     
