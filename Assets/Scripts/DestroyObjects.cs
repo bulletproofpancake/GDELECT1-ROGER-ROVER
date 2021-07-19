@@ -31,6 +31,7 @@ public class DestroyObjects : MonoBehaviour
                     if (hit.rigidbody.gameObject.tag == "Collectables") //clicked coins
                     {
                         Destroy(hit.rigidbody.gameObject);//removes object
+                        GameManager.instance.cash += 5;
                         Debug.Log("+1 Coins");
                     }
                 }
