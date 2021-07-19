@@ -13,7 +13,7 @@ public class cashCounter : MonoBehaviour
 
     void Start()
     {
-     count = GameManager.instance.cash;
+     count = CashManager.instance.cash;
      textmeshPro = GetComponent<TextMeshProUGUI>();
     }
 

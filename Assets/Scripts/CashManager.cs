@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class CashManager : MonoBehaviour
 {
-    public static GameManager instance;
+    public static CashManager instance;
 
     public int cash = 0;
 
