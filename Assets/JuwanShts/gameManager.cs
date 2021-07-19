@@ -5,11 +5,7 @@ using UnityEngine;
 
 public class gameManager : Singleton<gameManager>
 {
-
-    public Text happinessText;
-    public Text hungerText;
     public Pet pet;
-
     public int hoursPassed;
 
     protected override void Awake()
@@ -28,10 +24,16 @@ public class gameManager : Singleton<gameManager>
     {
         PlayerPrefs.SetString("entryTime", DateTime.Now.ToString());
     }
-
-    //TODO: CALL ON EXIT
-    public void SetExitTime()
+    
+    public void SetExitStats()
     {
+        if(pet != null)
+        {
+            PlayerPrefs.SetInt("happiness", pet.Happiness);
+            PlayerPrefs.SetInt("hunger", pet.Hunger);
+        }
+        
+        PlayerPrefs.SetInt("cash", CashManager.instance.cash);
         PlayerPrefs.SetString("exitTime", DateTime.Now.ToString());
     }
 
@@ -45,18 +47,6 @@ public class gameManager : Singleton<gameManager>
 
         var timeSinceExit = entryDate.Subtract(exitDate);
 
-        //TODO: CHANGE TO HOURS
         hoursPassed = timeSinceExit.Hours;
-        
-        print(hoursPassed);
-
     }
-
-    private void Update()
-    {
-        happinessText.text = $"Happiness: {pet.Happiness}";
-        hungerText.text = $"Hunger: {pet.Hunger}";
-    }
-
-
 }

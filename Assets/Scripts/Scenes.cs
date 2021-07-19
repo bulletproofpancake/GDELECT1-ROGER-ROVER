@@ -16,11 +16,13 @@ public class Scenes : Singleton<Scenes>
 
     public void Load(string sceneName)
     {
+        gameManager.Instance.SetExitStats();
         SceneManager.LoadScene(sceneName);
     }
 
     public void QuitGame()
     {
+        gameManager.Instance.SetExitStats();
         Application.Quit();
     }
 }

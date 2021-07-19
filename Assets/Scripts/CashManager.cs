@@ -8,7 +8,7 @@ public class CashManager : MonoBehaviour
 {
     public static CashManager instance;
 
-    public int cash = 0;
+    public int cash;
 
     private void Awake()
     {
@@ -21,18 +21,6 @@ public class CashManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        cash = PlayerPrefs.GetInt("cash");
     }
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-     
-    }
-
-
 }
