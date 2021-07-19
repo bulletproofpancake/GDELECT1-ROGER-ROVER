@@ -1,10 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using Core;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class gameManager : MonoBehaviour
+public class gameManager : Singleton<gameManager>
 {
 
     public Text happinessText;
@@ -14,13 +13,10 @@ public class gameManager : MonoBehaviour
 
     public int hoursPassed;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         SetEntryTime();
-    }
-
-    private void Start()
-    {
         CalculateTimePassed();
     }
 
@@ -51,8 +47,8 @@ public class gameManager : MonoBehaviour
 
     private void Update()
     {
-        happinessText.text = $"Happiness: {pet.checkHapiness}";
-        hungerText.text = $"Hunger: {pet.checkHunger}";
+        happinessText.text = $"Happiness: {pet.Happiness}";
+        hungerText.text = $"Hunger: {pet.Hunger}";
         hoursText.text = $"Hours since last play: {hoursPassed}";
     }
 
