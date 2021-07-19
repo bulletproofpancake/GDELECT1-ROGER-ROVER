@@ -27,14 +27,11 @@ public class gameManager : MonoBehaviour
     private void SetEntryTime()
     {
         PlayerPrefs.SetString("entryTime", DateTime.Now.ToString());
-        Debug.LogWarning(PlayerPrefs.GetString("entryTime"));
-        Debug.LogWarning(PlayerPrefs.GetString("exitTime"));
     }
 
     public void SetExitTime()
     {
         PlayerPrefs.SetString("exitTime", DateTime.Now.ToString());
-        Debug.LogWarning(PlayerPrefs.GetString("exitTime"));
     }
 
     private void CalculateTimePassed()
