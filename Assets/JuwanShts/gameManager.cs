@@ -30,6 +30,7 @@ public class gameManager : Singleton<gameManager>
         PlayerPrefs.SetString("entryTime", DateTime.Now.ToString());
     }
 
+    //TODO: CALL ON EXIT
     public void SetExitTime()
     {
         PlayerPrefs.SetString("exitTime", DateTime.Now.ToString());
@@ -46,7 +47,7 @@ public class gameManager : Singleton<gameManager>
         var timeSinceExit = entryDate.Subtract(exitDate);
 
         //TODO: CHANGE TO HOURS
-        hoursPassed = timeSinceExit.Minutes;
+        hoursPassed = timeSinceExit.Hours;
 
     }
 

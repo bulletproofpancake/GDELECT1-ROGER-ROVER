@@ -163,6 +163,8 @@ public class Pet : MonoBehaviour
     public int Happiness => happiness;
     public int Hunger => hunger;
 
+    private int _petCounter;
+
     public void Start()
     {
         CalculateStats();
@@ -182,5 +184,34 @@ public class Pet : MonoBehaviour
         if (stat <= 0)
             stat = 0;
         return stat;
+    }
+
+    private int AddToStat(int stat, int points)
+    {
+        stat += points;
+        return stat;
+    }
+
+    public void AddToHappiness(int points)
+    {
+        happiness = AddToStat(happiness, points);
+    }
+
+    public void AddToHunger(int points)
+    {
+        hunger = AddToStat(hunger, points);
+    }
+
+    private void PetRover()
+    {
+        _petCounter++;
+        // Happiness increases every 3 clicks
+        if(_petCounter % 3 == 0)
+            happiness = AddToStat(happiness, 1);
+    }
+
+    private void OnMouseDown()
+    {
+        PetRover();
     }
 }
