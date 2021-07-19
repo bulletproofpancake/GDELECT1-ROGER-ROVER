@@ -171,7 +171,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 880860824}
+  - {fileID: 30054203}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -340,6 +340,35 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28926759}
   m_Mesh: {fileID: 5470333549339496105, guid: 5181c8bbe8f69d94caee3b3ca4f80699, type: 3}
+--- !u!21 &30054203
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'iAcademyLogoMaterial
+
+    15822'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: c3c330f040264587b0c484aee42542b7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &46709353
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,11 +697,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122829737}
   m_Mesh: {fileID: 3679455771549808982, guid: 5181c8bbe8f69d94caee3b3ca4f80699, type: 3}
---- !u!1 &124858782 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9176192963521584219, guid: 0e603499337e7544cbdef456c823d111, type: 3}
-  m_PrefabInstance: {fileID: 965807390}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &129983980
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,6 +2023,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563177396}
   m_Mesh: {fileID: 409760005357578007, guid: 5181c8bbe8f69d94caee3b3ca4f80699, type: 3}
+--- !u!114 &611355545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9176192963090564204, guid: 0e603499337e7544cbdef456c823d111, type: 3}
+  m_PrefabInstance: {fileID: 965807390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &627105679
 GameObject:
   m_ObjectHideFlags: 0
@@ -2081,6 +2116,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627105679}
   m_Mesh: {fileID: -649114566144498003, guid: 5181c8bbe8f69d94caee3b3ca4f80699, type: 3}
+--- !u!114 &638872609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9176192963253910041, guid: 0e603499337e7544cbdef456c823d111, type: 3}
+  m_PrefabInstance: {fileID: 965807390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &645540649
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,11 +2780,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 816660911}
   m_Mesh: {fileID: 8277289011001763288, guid: 5181c8bbe8f69d94caee3b3ca4f80699, type: 3}
---- !u!1 &838178885 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9176192962697077481, guid: 0e603499337e7544cbdef456c823d111, type: 3}
-  m_PrefabInstance: {fileID: 965807390}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &841952232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,35 +3032,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865116415}
   m_Mesh: {fileID: 7287366422594872497, guid: 5181c8bbe8f69d94caee3b3ca4f80699, type: 3}
---- !u!21 &880860824
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'iAcademyLogoMaterial
-
-    25416'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c3c330f040264587b0c484aee42542b7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &924810898
 GameObject:
   m_ObjectHideFlags: 0
@@ -5425,7 +5437,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1613850987}
   - component: {fileID: 1613850988}
-  - component: {fileID: 1613850989}
   - component: {fileID: 1613850990}
   m_Layer: 0
   m_Name: Rover
@@ -5499,18 +5510,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.561997, y: 2.669452, z: 5}
   m_Center: {x: 0.10526764, y: 1.083724, z: 0}
---- !u!114 &1613850989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613850986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e5a93d356b198b4d98a54fe3bf6ff71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1613850990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7013,9 +7012,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cddcb14c527aee342a619fd757a0bfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  happinessText: {fileID: 124858782}
-  hungerText: {fileID: 838178885}
-  pet: {fileID: 1613850986}
+  happinessText: {fileID: 638872609}
+  hungerText: {fileID: 611355545}
+  pet: {fileID: 1613850990}
 --- !u!4 &2047691390
 Transform:
   m_ObjectHideFlags: 0
