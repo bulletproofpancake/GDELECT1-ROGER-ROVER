@@ -20,6 +20,11 @@ public class gameManager : Singleton<gameManager>
         CalculateTimePassed();
     }
 
+    private void Start()
+    {
+        pet = FindObjectOfType<Pet>();
+    }
+
     private void SetEntryTime()
     {
         PlayerPrefs.SetString("entryTime", DateTime.Now.ToString());
