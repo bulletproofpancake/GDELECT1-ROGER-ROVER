@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 
-public class bossCounter : MonoBehaviour
+public class cashCounter : MonoBehaviour
 {
     // Start is called before the first frame update
     private int count;
