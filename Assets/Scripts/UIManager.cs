@@ -11,10 +11,18 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        // hungerDisplay.text = $"Hunger: {gameManager.Instance.pet.Hunger}";
-        // happinessDisplay.text = $"Happiness: {gameManager.Instance.pet.Happiness}";
         hungerDisplay.fillAmount = (float)gameManager.Instance.pet.Hunger/100f;
         happinessDisplay.fillAmount = (float)gameManager.Instance.pet.Happiness/100f;
+
+        ColorChanger();
+    }
+    void ColorChanger()
+    {
+        Color hungerColor = Color.Lerp(Color.red, Color.green, (gameManager.Instance.pet.Hunger / 100f));
+        hungerDisplay.color = hungerColor;
+
+        Color hapinessColor = Color.Lerp(Color.red, Color.green, (gameManager.Instance.pet.Happiness / 100f));
+        happinessDisplay.color = hapinessColor;
     }
 
     public void openFoodPanel()
@@ -33,4 +41,6 @@ public class UIManager : MonoBehaviour
     {
         ShopPanel.SetActive(false);
     }
+
+
 }
