@@ -12,6 +12,7 @@ public class ItemScript : MonoBehaviour
     private void Start()
     {
         _pet = FindObjectOfType<Pet>();
+        costDisplay = GetComponentInChildren<Text>();
         costDisplay.text = $"Buy: {cost}";
     }
 

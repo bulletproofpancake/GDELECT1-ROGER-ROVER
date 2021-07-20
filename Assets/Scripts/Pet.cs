@@ -158,9 +158,13 @@ public class Pet : MonoBehaviour
         // }
     #endregion
 
-    [SerializeField]private int _happiness;
+    [Range(0,100)]
+    [SerializeField]
+    private int _happiness;
 
-    [SerializeField]private int _hunger;
+    [Range(0,100)]
+    [SerializeField]
+    private int _hunger;
 
     public int Happiness => _happiness;
     public int Hunger => _hunger;
