@@ -171,10 +171,56 @@ public class Pet : MonoBehaviour
 
     private int _petCounter;
 
+    private Animator _animator;
+
+    private bool _isAnimationPlaying;
+
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     public void Start()
     {
+        _animator.SetInteger("Happiness", _happiness);
+        _animator.SetInteger("Hunger", _hunger);
         CalculateStats();
         StartCoroutine(ReduceStats());
+    }
+
+
+    private void Update()
+    {
+        // Only plays idle and sad animations when no specific animation is playing
+        if(!_isAnimationPlaying){
+            if (_happiness >= 25 && _hunger >= 50)
+            {
+                _animator.Play("Idle");
+            }
+            else
+            {
+                _animator.Play("Sad");
+            }
+        }
+    }
+
+    public void PlayAnimation(string animationName)
+    {
+        StartCoroutine(Play(animationName));
+    }
+    
+    private IEnumerator Play(string animationName)
+    {
+        foreach (var clip in _animator.runtimeAnimatorController.animationClips)
+        {
+            if (clip.name == animationName)
+            {
+                _isAnimationPlaying = true;
+                _animator.Play(clip.name);
+                yield return new WaitForSeconds(clip.length);
+                _isAnimationPlaying = false;
+            }
+        }
     }
 
     private void CalculateStats()
@@ -226,7 +272,10 @@ public class Pet : MonoBehaviour
         _petCounter++;
         // Happiness increases every 3 clicks
         if(_petCounter % 3 == 0)
+        {
+            PlayAnimation("Happy");
             _happiness = AddToStat(_happiness, 1);
+        }
     }
 
     private void OnMouseDown()
@@ -238,9 +287,9 @@ public class Pet : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(120f);
+            yield return new WaitForSeconds(20f);
             _happiness = CalculateStat(_happiness, 1);
-            _hunger = CalculateStat(_hunger, 1);
+            _hunger = CalculateStat(_hunger, 2);
         }
     }
     
