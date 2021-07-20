@@ -158,9 +158,9 @@ public class Pet : MonoBehaviour
         // }
     #endregion
 
-    private int _happiness;
+    [SerializeField]private int _happiness;
 
-    private int _hunger;
+    [SerializeField]private int _hunger;
 
     public int Happiness => _happiness;
     public int Hunger => _hunger;
