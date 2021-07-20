@@ -27,18 +27,22 @@ public class UIManager : MonoBehaviour
 
     public void openFoodPanel()
     {
+        AudioManager.Instance.Play("buttonOpen");
         FoodPanel.SetActive(true);
     }
     public void closeFoodPanel()
     {
+        AudioManager.Instance.Play("buttonClose");
         FoodPanel.SetActive(false);
     }
     public void openShopPanel()
     {
+        AudioManager.Instance.Play("buttonOpen");
         ShopPanel.SetActive(true);
     }
     public void closeShopPanel()
     {
+        AudioManager.Instance.Play("buttonClose");
         ShopPanel.SetActive(false);
     }
 
