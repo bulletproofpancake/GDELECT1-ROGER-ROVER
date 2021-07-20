@@ -32,8 +32,7 @@ AnimatorState:
   m_Name: Scan
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -6078836467891739154}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -125,8 +124,7 @@ AnimatorState:
   m_Name: Happy
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -5265664324554912846}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -174,8 +172,7 @@ AnimatorState:
   m_Name: Sad
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -2240745050519879063}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -200,8 +197,14 @@ AnimatorController:
   m_Name: Rover 1
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: HungerMeter
-    m_Type: 1
+  - m_Name: Happiness
+    m_Type: 3
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Hunger
+    m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -289,10 +292,7 @@ AnimatorStateMachine:
     m_State: {fileID: -7832627200901929828}
     m_Position: {x: 570, y: 10, z: 0}
   m_ChildStateMachines: []
-  m_AnyStateTransitions:
-  - {fileID: -9157189024158414315}
-  - {fileID: -3944917124922821902}
-  - {fileID: 150140556932725891}
+  m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
