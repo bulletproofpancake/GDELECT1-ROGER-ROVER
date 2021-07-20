@@ -13,13 +13,14 @@ public class cashCounter : MonoBehaviour
 
     void Start()
     {
-     count = CashManager.instance.cash;
+     
      textmeshPro = GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        count = CashManager.instance.cash;
         textmeshPro.SetText("Cash: {000}", count);
     }
 }
