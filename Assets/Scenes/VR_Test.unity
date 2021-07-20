@@ -346,6 +346,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74850033}
   m_CullTransparentMesh: 1
+--- !u!1 &369339009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 369339010}
+  m_Layer: 0
+  m_Name: Rocks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &369339010
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369339009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.60422266, y: -28.206524, z: -12.664452}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &554226237
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,15 +501,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnList:
-  - gameObject: {fileID: 3817260232457118937, guid: 628991eeaf11fd545999f51c49fba6f3, type: 3}
+  - gameObject: {fileID: 4797674324814285273, guid: f34d3f807906e114b96f553f721e448c, type: 3}
     weight: 5
-  - gameObject: {fileID: 1596514913208356556, guid: e6377b6162a7eb74a8c1dcef4118187c, type: 3}
+  - gameObject: {fileID: 3994248921359935826, guid: 46d763e1054443241a242bdad01b51c2, type: 3}
     weight: 3
-  - gameObject: {fileID: 9067369098485420357, guid: c7341ef46875de14991124b6191ad756, type: 3}
+  - gameObject: {fileID: 8051641280446275840, guid: 2f1d5cf2bf5c8a24a9b1d211b0a78fdb, type: 3}
     weight: 2
-  _totalSpawnWeight: 10
+  - gameObject: {fileID: 824244934306772283, guid: bee80ef18334f3646b6815b1119d6679, type: 3}
+    weight: 2
+  - gameObject: {fileID: 2448452507955886277, guid: cd5618114d2e88a4a9ce001252b25075, type: 3}
+    weight: 2
+  - gameObject: {fileID: 4677908260566741726, guid: 6eae36d3f0f528a40aeee59bb481e8ee, type: 3}
+    weight: 2
+  - gameObject: {fileID: 6228269911659253360, guid: 5f8d3d61cb836e6469665d4832c45a7a, type: 3}
+    weight: 2
+  - gameObject: {fileID: 5089841630041612936, guid: fdc80facd2963854687b108155aa8884, type: 3}
+    weight: 2
+  _totalSpawnWeight: 20
   center: {x: -0, y: 0.03, z: 13.45}
-  size: {x: 185.7, y: 1, z: 51.9}
+  size: {x: 185.7, y: 1, z: 165.19}
   SpawnIntervals: 0
   maximumSpawnTime: 7
   minimumSpawnTime: 0.2
@@ -699,6 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61679fc66dec18e459e2045cdac59dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cashPlus: 0
 --- !u!114 &1079324437
 MonoBehaviour:
   m_ObjectHideFlags: 0

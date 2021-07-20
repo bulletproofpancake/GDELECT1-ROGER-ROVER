@@ -8,11 +8,13 @@ public class DestroyObjects : MonoBehaviour
 
     RaycastHit hit; 
 
+    [SerializeField]
+    private int cashPlus;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
@@ -31,7 +33,7 @@ public class DestroyObjects : MonoBehaviour
                     if (hit.rigidbody.gameObject.tag == "Collectables") //clicked coins
                     {
                         Destroy(hit.rigidbody.gameObject);//removes object
-                        CashManager.instance.cash += 5;
+                        CashManager.instance.cash += cashPlus;
                         Debug.Log("+1 Coins");
                     }
                 }
