@@ -6,13 +6,15 @@ public class UIManager : MonoBehaviour
     public GameObject FoodPanel;
     public GameObject ShopPanel;
 
-    [SerializeField] private Text hungerDisplay;
-    [SerializeField] private Text happinessDisplay;
+    [SerializeField] private Image hungerDisplay;
+    [SerializeField] private Image happinessDisplay;
 
     private void Update()
     {
-        hungerDisplay.text = $"Hunger: {gameManager.Instance.pet.Hunger}";
-        happinessDisplay.text = $"Happiness: {gameManager.Instance.pet.Happiness}";
+        // hungerDisplay.text = $"Hunger: {gameManager.Instance.pet.Hunger}";
+        // happinessDisplay.text = $"Happiness: {gameManager.Instance.pet.Happiness}";
+        hungerDisplay.fillAmount = gameManager.Instance.pet.Hunger;
+        happinessDisplay.fillAmount = gameManager.Instance.pet.Happiness;
     }
 
     public void openFoodPanel()
