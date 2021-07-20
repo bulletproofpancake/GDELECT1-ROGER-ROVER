@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: 513a8ccc5f450574f8c2bda2abd58a0e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5325600070131949419
+    second: Roger Rover EyesSAD_0
+  - first:
+      213: -4514018879340087651
+    second: Roger Rover EyesSAD_1
+  - first:
+      213: 3470484346700979832
+    second: Roger Rover EyesSAD_2
+  - first:
+      213: -7353766889688889162
+    second: Roger Rover EyesSAD_3
+  - first:
+      213: 7008531923928484479
+    second: Roger Rover EyesSAD_4
+  - first:
+      213: 8909670463417796404
+    second: Roger Rover EyesSAD_5
+  - first:
+      213: -7050248179791396089
+    second: Roger Rover EyesSAD_6
+  - first:
+      213: 5920277068677701170
+    second: Roger Rover EyesSAD_7
+  - first:
+      213: 6381867460949277242
+    second: Roger Rover EyesSAD_8
+  - first:
+      213: -6656987088947684088
+    second: Roger Rover EyesSAD_9
+  - first:
+      213: -8801924245251017684
+    second: Roger Rover EyesSAD_10
+  - first:
+      213: -9115178551168719971
+    second: Roger Rover EyesSAD_11
+  - first:
+      213: -567625451575775103
+    second: Roger Rover EyesSAD_12
+  - first:
+      213: 8234067014998112876
+    second: Roger Rover EyesSAD_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +74,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,7 +83,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,7 +143,301 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64.71429
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f920c2c0558e940800000000000000
+      internalID: 5325600070131949419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96f68bdebbfa51c0800000000000000
+      internalID: -4514018879340087651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e5aab3023a92030800000000000000
+      internalID: 3470484346700979832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_3
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8801bc9fb22f990800000000000000
+      internalID: -7353766889688889162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a0ebae6ae434160800000000000000
+      internalID: 7008531923928484479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_5
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437cecdb41285ab70800000000000000
+      internalID: 8909670463417796404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_6
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703803162ac782e90800000000000000
+      internalID: -7050248179791396089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_7
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23edc6280ac092250800000000000000
+      internalID: 5920277068677701170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_8
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a7185a4a2f09850800000000000000
+      internalID: 6381867460949277242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_9
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d59e84381ad93a0800000000000000
+      internalID: -6656987088947684088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_10
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c243ae5988849d580800000000000000
+      internalID: -8801924245251017684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_11
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d932459e661608180800000000000000
+      internalID: -9115178551168719971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_12
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180fa51c8a36f18f0800000000000000
+      internalID: -567625451575775103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Roger Rover EyesSAD_13
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 0
+        width: 65
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a39bdf258454270800000000000000
+      internalID: 8234067014998112876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
