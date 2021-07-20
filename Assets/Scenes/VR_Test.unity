@@ -517,7 +517,9 @@ MonoBehaviour:
     weight: 2
   - gameObject: {fileID: 5089841630041612936, guid: fdc80facd2963854687b108155aa8884, type: 3}
     weight: 2
-  _totalSpawnWeight: 20
+  - gameObject: {fileID: 3817260232457118937, guid: 628991eeaf11fd545999f51c49fba6f3, type: 3}
+    weight: 10
+  _totalSpawnWeight: 30
   center: {x: -0, y: 0.03, z: 13.45}
   size: {x: 185.7, y: 1, z: 165.19}
   SpawnIntervals: 0
@@ -739,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61679fc66dec18e459e2045cdac59dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cashPlus: 0
+  cashPlus: 1
 --- !u!114 &1079324437
 MonoBehaviour:
   m_ObjectHideFlags: 0

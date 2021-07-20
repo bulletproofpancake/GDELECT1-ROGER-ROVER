@@ -34,7 +34,7 @@ public class DestroyObjects : MonoBehaviour
                     {
                         Destroy(hit.rigidbody.gameObject);//removes object
                         CashManager.instance.cash += cashPlus;
-                        Debug.Log("+1 Coins");
+                        Debug.Log("+" + cashPlus + " Coins");
                     }
                 }
                 else
