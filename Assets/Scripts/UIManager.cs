@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
         // hungerDisplay.text = $"Hunger: {gameManager.Instance.pet.Hunger}";
         // happinessDisplay.text = $"Happiness: {gameManager.Instance.pet.Happiness}";
         hungerDisplay.fillAmount = (float)gameManager.Instance.pet.Hunger/100f;
-        happinessDisplay.fillAmount = gameManager.Instance.pet.Happiness;
+        happinessDisplay.fillAmount = (float)gameManager.Instance.pet.Happiness/100f;
     }
 
     public void openFoodPanel()
