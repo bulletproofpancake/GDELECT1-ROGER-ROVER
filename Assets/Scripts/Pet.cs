@@ -274,7 +274,7 @@ public class Pet : MonoBehaviour
         if(_petCounter % 3 == 0)
         {
             PlayAnimation("Happy");
-            _happiness = AddToStat(_happiness, 1);
+            _happiness = AddToStat(_happiness, 10);
         }
     }
 
