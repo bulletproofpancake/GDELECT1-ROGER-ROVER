@@ -159,20 +159,17 @@ public class Pet : MonoBehaviour
     #endregion
 
     [Range(0,100)]
-    [SerializeField]
-    private int _happiness;
-
+    [SerializeField] private int happiness;
     [Range(0,100)]
-    [SerializeField]
-    private int _hunger;
+    [SerializeField] private int hunger;
 
-    public int Happiness => _happiness;
-    public int Hunger => _hunger;
+    [SerializeField] private GameObject heartBubble, hungryBubble, angryBubble;
+    
+    public int Happiness => happiness;
+    public int Hunger => hunger;
 
     private int _petCounter;
-
     private Animator _animator;
-
     private bool _isAnimationPlaying;
 
     private void Awake()
@@ -182,8 +179,8 @@ public class Pet : MonoBehaviour
 
     public void Start()
     {
-        _animator.SetInteger("Happiness", _happiness);
-        _animator.SetInteger("Hunger", _hunger);
+        _animator.SetInteger("Happiness", happiness);
+        _animator.SetInteger("Hunger", hunger);
         CalculateStats();
         StartCoroutine(ReduceStats());
     }
@@ -193,7 +190,7 @@ public class Pet : MonoBehaviour
     {
         // Only plays idle and sad animations when no specific animation is playing
         if(!_isAnimationPlaying){
-            if (_happiness >= 25 && _hunger >= 50)
+            if (happiness >= 25 && hunger >= 50)
             {
                 _animator.Play("Idle");
             }
@@ -202,11 +199,16 @@ public class Pet : MonoBehaviour
                 _animator.Play("Sad");
             }
         }
+
+        
+        hungryBubble.SetActive(hunger < 50);
+        angryBubble.SetActive(happiness < 25);
+
     }
 
     public void PlayAnimation(string animationName)
     {
-        StartCoroutine(Play(animationName));
+        StartCoroutine(Play(animationName, heartBubble));
     }
     
     private IEnumerator Play(string animationName)
@@ -222,23 +224,38 @@ public class Pet : MonoBehaviour
             }
         }
     }
+    private IEnumerator Play(string animationName, GameObject speechBubble)
+    {
+        foreach (var clip in _animator.runtimeAnimatorController.animationClips)
+        {
+            if (clip.name == animationName)
+            {
+                _isAnimationPlaying = true;
+                _animator.Play(clip.name);
+                speechBubble.SetActive(true);
+                yield return new WaitForSeconds(clip.length);
+                speechBubble.SetActive(false);
+                _isAnimationPlaying = false;
+            }
+        }
+    }
 
     private void CalculateStats()
     {
 
-        _happiness = PlayerPrefs.GetInt("happiness");
-        _hunger = PlayerPrefs.GetInt("hunger");
+        happiness = PlayerPrefs.GetInt("happiness");
+        hunger = PlayerPrefs.GetInt("hunger");
 
-        if (_happiness >= 100)
-            _happiness = 100;
+        if (happiness >= 100)
+            happiness = 100;
         
-        if (_hunger >= 100)
-            _hunger = 100;
+        if (hunger >= 100)
+            hunger = 100;
         
         //multiplied to 5 because stats lose 5 points per hour
         var timePassed = gameManager.Instance.hoursPassed * 5;
-        _happiness = CalculateStat(_happiness, timePassed);
-        _hunger = CalculateStat(_hunger, timePassed);
+        happiness = CalculateStat(happiness, timePassed);
+        hunger = CalculateStat(hunger, timePassed);
     }
 
     private int CalculateStat(int stat, int timePassed)
@@ -259,12 +276,12 @@ public class Pet : MonoBehaviour
 
     public void AddToHappiness(int points)
     {
-        _happiness = AddToStat(_happiness, points);
+        happiness = AddToStat(happiness, points);
     }
 
     public void AddToHunger(int points)
     {
-        _hunger = AddToStat(_hunger, points);
+        hunger = AddToStat(hunger, points);
     }
 
     private void PetRover()
@@ -274,7 +291,7 @@ public class Pet : MonoBehaviour
         if(_petCounter % 3 == 0)
         {
             PlayAnimation("Happy");
-            _happiness = AddToStat(_happiness, 10);
+            happiness = AddToStat(happiness, 10);
         }
     }
 
@@ -288,8 +305,8 @@ public class Pet : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(20f);
-            _happiness = CalculateStat(_happiness, 1);
-            _hunger = CalculateStat(_hunger, 2);
+            happiness = CalculateStat(happiness, 1);
+            hunger = CalculateStat(hunger, 2);
         }
     }
     
