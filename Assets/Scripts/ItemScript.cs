@@ -15,7 +15,7 @@ public class ItemScript : MonoBehaviour
         _pet = FindObjectOfType<Pet>();
         _uiManager = FindObjectOfType<UIManager>();
         costDisplay = GetComponentInChildren<Text>();
-        costDisplay.text = $"Buy: {cost}";
+        costDisplay.text += $": {cost}";
     }
 
     public void BuyFood(int value)
