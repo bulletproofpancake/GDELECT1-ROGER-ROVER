@@ -24,6 +24,7 @@ public class ItemScript : MonoBehaviour
         {
             _pet.PlayAnimation("Happy");
             _pet.AddToHunger(value);
+            CashManager.instance.Spend(cost);
             _uiManager.closeFoodPanel();
         }
     }
@@ -34,6 +35,7 @@ public class ItemScript : MonoBehaviour
         {
             _pet.PlayAnimation("Happy");
             _pet.AddToHappiness(value);
+            CashManager.instance.Spend(cost);
             _uiManager.closeShopPanel();
         }
     }

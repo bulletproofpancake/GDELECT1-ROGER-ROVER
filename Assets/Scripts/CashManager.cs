@@ -23,4 +23,10 @@ public class CashManager : MonoBehaviour
         }
         cash = PlayerPrefs.GetInt("cash");
     }
+
+    public void Spend(int cost)
+    {
+        cash -= cost;
+    }
+    
 }
