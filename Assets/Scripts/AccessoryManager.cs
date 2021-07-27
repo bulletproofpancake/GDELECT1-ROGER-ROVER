@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AccessoryManager : MonoBehaviour
 {
     [SerializeField] private GameObject hat, satellite, drone;
+    [SerializeField] private GameObject hatBtn, satelliteBtn, droneBtn;
     
     // Update is called once per frame
     void Update()
@@ -56,6 +58,28 @@ public class AccessoryManager : MonoBehaviour
 
                 break;
         }
+    }
+
+    public void SetButton(string itemName,bool status)
+    {
+        switch (itemName)
+        {
+            case "hat":
+                hatBtn.SetActive(status);
+                break;
+            case "satellite":
+                satelliteBtn.SetActive(status);
+                break;
+            case "drone":
+                droneBtn.SetActive(status);
+                break;
+        }
+    }
+    
+    public void SetButtonStatus(ItemScript item)
+    {
+        
+        SetButton(item.name,item.hasBeenBought);
     }
     
     public void BuyItem(string itemName)

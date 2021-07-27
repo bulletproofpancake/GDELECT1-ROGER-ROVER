@@ -984,6 +984,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 195636944}
+        m_TargetAssemblyTypeName: AccessoryManager, Assembly-CSharp
+        m_MethodName: SetButtonStatus
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 439702050}
+          m_ObjectArgumentAssemblyTypeName: ItemScript, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &289036437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,7 +1371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &403683435
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1487,7 +1499,7 @@ GameObject:
   - component: {fileID: 439702051}
   - component: {fileID: 439702050}
   m_Layer: 5
-  m_Name: Acce (1)
+  m_Name: satellite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1529,6 +1541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 50
   costDisplay: {fileID: 0}
+  hasBeenBought: 0
 --- !u!114 &439702051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1753,6 +1766,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 195636944}
+        m_TargetAssemblyTypeName: AccessoryManager, Assembly-CSharp
+        m_MethodName: SetButtonStatus
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1196938391}
+          m_ObjectArgumentAssemblyTypeName: ItemScript, Assembly-CSharp
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2840,6 +2865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 30
   costDisplay: {fileID: 0}
+  hasBeenBought: 0
 --- !u!1 &1072737141
 GameObject:
   m_ObjectHideFlags: 0
@@ -2858,7 +2884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1072737142
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3262,7 +3288,7 @@ GameObject:
   - component: {fileID: 1196938389}
   - component: {fileID: 1196938391}
   m_Layer: 5
-  m_Name: Acce
+  m_Name: hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3342,6 +3368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   costDisplay: {fileID: 0}
+  hasBeenBought: 0
 --- !u!1 &1227546429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3360,7 +3387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1227546430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4176,6 +4203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 50
   costDisplay: {fileID: 0}
+  hasBeenBought: 0
 --- !u!1 &1569154648
 GameObject:
   m_ObjectHideFlags: 0
@@ -4189,7 +4217,7 @@ GameObject:
   - component: {fileID: 1569154651}
   - component: {fileID: 1569154650}
   m_Layer: 5
-  m_Name: Acce (2)
+  m_Name: drone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4231,6 +4259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 80
   costDisplay: {fileID: 0}
+  hasBeenBought: 0
 --- !u!114 &1569154651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4868,6 +4897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 10
   costDisplay: {fileID: 0}
+  hasBeenBought: 0
 --- !u!1 &1872705364
 GameObject:
   m_ObjectHideFlags: 0
@@ -4958,6 +4988,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 195636944}
+        m_TargetAssemblyTypeName: AccessoryManager, Assembly-CSharp
+        m_MethodName: SetButtonStatus
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1569154650}
+          m_ObjectArgumentAssemblyTypeName: ItemScript, Assembly-CSharp
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -7352,6 +7394,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rover
       objectReference: {fileID: 0}
+    - target: {fileID: 2810969892413695779, guid: 7707427da12ea56459216003245f1e21, type: 3}
+      propertyPath: hatBtn
+      value: 
+      objectReference: {fileID: 1227546429}
+    - target: {fileID: 2810969892413695779, guid: 7707427da12ea56459216003245f1e21, type: 3}
+      propertyPath: droneBtn
+      value: 
+      objectReference: {fileID: 403683434}
+    - target: {fileID: 2810969892413695779, guid: 7707427da12ea56459216003245f1e21, type: 3}
+      propertyPath: satelliteBtn
+      value: 
+      objectReference: {fileID: 1072737141}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7707427da12ea56459216003245f1e21, type: 3}
 --- !u!4 &2811321699689751178

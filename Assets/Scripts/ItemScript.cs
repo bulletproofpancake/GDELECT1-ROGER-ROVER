@@ -9,7 +9,7 @@ public class ItemScript : MonoBehaviour
     [SerializeField] private int cost;
     [SerializeField] private Text costDisplay;
     private UIManager _uiManager;
-
+    public bool hasBeenBought;
 
     private void Awake()
     {
@@ -44,6 +44,7 @@ public class ItemScript : MonoBehaviour
         {
             _pet.PlayAnimation("Happy");
             _pet.AddToHappiness(value);
+            hasBeenBought = true;
             CashManager.instance.Spend(cost);
             _uiManager.closeShopPanel();
         }

@@ -944,7 +944,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1855250894924996269
 Transform:
   m_ObjectHideFlags: 0
@@ -2154,6 +2154,9 @@ MonoBehaviour:
   hat: {fileID: 2810969892779527448}
   satellite: {fileID: 1365994147576185879}
   drone: {fileID: 9008459934262090412}
+  hatBtn: {fileID: 0}
+  satelliteBtn: {fileID: 0}
+  droneBtn: {fileID: 0}
 --- !u!1 &2810969892482144880
 GameObject:
   m_ObjectHideFlags: 0
@@ -2414,7 +2417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2810969892779527455
 Transform:
   m_ObjectHideFlags: 0
@@ -6707,7 +6710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8525219778367291414
 Transform:
   m_ObjectHideFlags: 0
