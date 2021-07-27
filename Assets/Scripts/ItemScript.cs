@@ -10,6 +10,15 @@ public class ItemScript : MonoBehaviour
     [SerializeField] private Text costDisplay;
     private UIManager _uiManager;
 
+
+    private void Awake()
+    {
+        if (costDisplay == null)
+        {
+            costDisplay = GetComponentInChildren<Text>();
+        }
+    }
+
     private void Start()
     {
         _pet = FindObjectOfType<Pet>();
