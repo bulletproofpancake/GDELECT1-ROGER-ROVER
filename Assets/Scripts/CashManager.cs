@@ -24,13 +24,6 @@ public class CashManager : MonoBehaviour
         cash = PlayerPrefs.GetInt("cash");
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            cash += 100;
-        }
-    }
 
     public void Spend(int cost)
     {
