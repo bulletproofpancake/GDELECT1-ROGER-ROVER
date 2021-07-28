@@ -85,16 +85,7 @@ public class AccessoryManager : MonoBehaviour
     public void BuyItem(string itemName)
     {
         var status = PlayerPrefs.GetInt(itemName + "_bought");
-
-        switch (status)
-        {
-            case 0:
-                PlayerPrefs.SetInt(itemName+"_bought",1);
-                break;
-            case 1:
-                PlayerPrefs.SetInt(itemName+"_bought",0);
-                break;
-        }
+        PlayerPrefs.SetInt(itemName+"_bought",1);
     }
     
 }
